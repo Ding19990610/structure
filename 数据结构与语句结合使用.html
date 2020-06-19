@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var students = [
+            {name:"丁龙飞0",age:18},
+            {name:"丁龙飞1",age:19},
+            {name:"丁龙飞2",age:20},
+            {name:"丁龙飞3",age:21},
+            {name:"丁龙飞4",age:22}
+        ]
+        for(var i = 0 ; i < students.length ; i++){
+            console.log("姓名: " + students[i].name + " 年龄: " + students[i].age)
+        }
+
+        var teachers = [
+            {name:"范珍",dec:"淑女",age:18},
+            {name:"闫岐",dec:"淑女",age:17},
+            {name:"金溪镇",dec:"君子",age:30},
+            {name:"管涛",dec:"君子",age:28},
+        ]
+        for(var i = 0 ; i < teachers.length ; i++){
+            if(teachers[i].age >=18){
+                document.writeln(`<h1>姓名:${teachers[i].name},描述:${teachers[i].dec},年龄:${teachers[i].age}</h1>`)
+            }else{
+                console.log("姓名: " + teachers[i].name + " 是个 : " + teachers[i].dec + " 年龄: " + teachers[i].age)
+            }
+            
+            // 模板字符${teachers[i].dec}
+        }
+    </script>
+    
+</body>
+</html>

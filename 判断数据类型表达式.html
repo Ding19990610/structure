@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = '';
+
+        //  true 就是   false  就不是 
+        // 1、如何保证一个变量一定是number
+        console.log(typeof data === "number"); //number
+        console.log(data.construtor === Number) ;
+        // 2、如何保证一个变量一定是string
+        console.log(typeof data === "string");
+        console.log(data.construtor === String) ;
+        // 3、如何保证一个变量一定是boolean
+        console.log(typeof data === "boolean");
+        console.log(data.construtor === Boolean) ;
+        // 4、如何保证一个变量一定是undefined
+        console.log(typeof data === "undefined");
+        // 5、如何保证一个变量一定是null
+        console.log(data === null);
+        // 6、如何保证一个变量一定是数组
+        console.log(Array.isArray(data));
+        console.log(data.construtor === Array) ;
+        console.log(data instanceof Array);
+        // 5、如何保证一个变量一定是对象
+        console.log(data.construtor === Object) ;
+        // 6、如何保证一个变量一定是函数
+        console.log(data.construtor === Function) ;
+        console.log(typeof data  === "function") ;
+
+        // 如何让一个变量data赋值是Number,或者是字符串
+        console.log(data.construtor === Number || data.construtor === String) ;
+        console.log(data === "number" || data === "string") ;
+
+        var a,b,c;
+        var str =typeof a != "number" && Array.isArray(b)  || typeof c === "string" ;
+    </script>
+</body>
+</html>

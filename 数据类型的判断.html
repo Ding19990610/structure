@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如何区分对象和数组
+        
+        // 1：判断一个数据是否是数组  Array.isArray(参数:js数据);
+
+        // 怎么用?
+        // --->> 需要保证一个数据 必须是数组的时候用
+            var arr = [1] ;
+            var obj = {} ;
+            var nu = null ; 
+            var res = Array.isArray(arr) ;
+            console.log(res) ;
+
+        //通过constructor获取构造函数的方式,区分数组和对象
+        // js (除了null 和 undefined ) 每一个数据 都有 构造函数
+        console.log(arr.constructor === Array) //true
+        console.log(obj.constructor === Object)  //true
+        // console.log(nu.constructor) //报错，即 null 没有 构造函数
+        // console.log(undefined.constructor) //报错，即 null 没有 构造函数
+        // console.log("".constructor)
+        // console.log(num.constructor)
+
+        // 如何判断一个数据是null
+        console.log(nu === null)  // true
+
+        // instanceof
+        // 用处:  判断一个数据，可能是数组，也可能是对象的时候，用instanceof
+
+        var data = [];
+        var res1 = data instanceof Object;//满足data可能是数组或对象
+
+        // 业务表达式
+        var res2 = data.instanceof == Array || data.instanceof == Object; 
+
+        // 作用判断数据类型，可以判断一个数据是否是数组，但是不能区分对象
+        console.log([] instanceof Object) //true
+        console.log({} instanceof Object) //true
+    </script>
+</body>
+</html>
